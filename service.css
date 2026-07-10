@@ -8,8 +8,10 @@ img{display:block;max-width:100%}
 /* header */
 .svc-header{display:flex;align-items:center;justify-content:space-between;padding:30px 0}
 .svc-header .logo{height:50px}
-.svc-contact{color:#db1200;font-weight:700;font-size:16px;transition:color .3s ease}
+.svc-contact{position:relative;color:#db1200;font-weight:700;font-size:16px;transition:color .3s ease}
 .svc-contact:hover{color:#eb1800}
+.svc-contact .contact-plus{position:absolute;left:-22px;top:-22px;width:31px;height:31px;opacity:0;transform:translateY(-6px);transition:opacity .4s cubic-bezier(0,0,.58,1),transform .4s cubic-bezier(0,0,.58,1);pointer-events:none}
+.svc-contact:hover .contact-plus{opacity:1;transform:translateY(0)}
 
 /* title */
 .svc-title{font-size:90px;line-height:.98;font-weight:700;color:#000;letter-spacing:0;margin:60px 0 40px}
