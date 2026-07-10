@@ -1,5 +1,5 @@
 *{margin:0;padding:0;box-sizing:border-box}
-html,body{background:#f0f0f0;font-family:"Fira Sans",Arial,sans-serif;color:#000}
+html,body{background:#f0f0f0;font-family:'FiraSans',Arial,sans-serif;color:#000}
 body{overflow-x:hidden}
 a{text-decoration:none;color:inherit}
 img{display:block}
@@ -47,9 +47,9 @@ img{display:block}
 .plus{position:absolute;width:35px;height:35px;z-index:2}
 
 /* ===== HOVER ANIMATIONS (400ms, matching original) ===== */
-/* red tiles: the "+" scales down (1 -> 0.55) on hover, easeInOut */
-.tile-hover .plus{transform:scale(1);transform-origin:center;transition:transform .4s ease-in-out}
-.tile-hover:hover .plus{transform:scale(0.55)}
+/* red tiles: the "+" fades/scales down (1 -> 0.5) on hover, easeOut (Tilda) */
+.tile-hover .plus{transform:scale(1);transform-origin:center;transition:transform .4s cubic-bezier(0,0,.58,1)}
+.tile-hover:hover .plus{transform:scale(0.5)}
 /* red fill subtly deepens */
 .tile-hover .fill-red{transition:background-color .4s ease}
 .tile-hover:hover .fill-red{background:#c21000}
@@ -63,8 +63,6 @@ img{display:block}
 .foot-copy{font-size:12px;color:#000}
 .foot-link{display:block;font-size:12px;line-height:1;color:#000;text-decoration:underline;text-underline-offset:3px;transition:color .3s ease}
 .foot-link:hover{color:#db1200}
-.foot-list a{position:relative;display:block;font-size:14px;line-height:1;margin-bottom:22px;padding-left:26px;text-decoration:underline;text-underline-offset:3px;transition:color .3s ease}
+.foot-list a{position:relative;display:block;font-size:14px;line-height:1;margin-bottom:22px;text-decoration:underline;text-underline-offset:3px;transition:color .3s ease}
 .foot-list a:last-child{margin-bottom:0}
 .foot-list a:hover{color:#db1200}
-.foot-list a::before{content:"+";position:absolute;left:2px;top:-3px;color:#db1200;font-weight:700;font-size:18px;line-height:1;opacity:0;transform:translateX(0);transition:opacity .35s ease-out,transform .35s ease-out}
-.foot-list a:hover::before{opacity:1;transform:translateX(8px)}

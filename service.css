@@ -1,5 +1,5 @@
 *{margin:0;padding:0;box-sizing:border-box}
-html,body{background:#f0f0f0;font-family:"Fira Sans",Arial,sans-serif;color:#000}
+html,body{background:#f0f0f0;font-family:'FiraSans',Arial,sans-serif;color:#000}
 a{text-decoration:none;color:inherit}
 img{display:block;max-width:100%}
 
@@ -35,10 +35,10 @@ img{display:block;max-width:100%}
 .so-red{position:absolute;left:75%;top:300px;width:25%;height:300px;background:#db1200}
 .so-label{position:absolute;left:3.3%;top:248px;color:#fff;font-size:14px;line-height:1.3;z-index:3}
 .so-links{position:absolute;left:10%;top:300px;z-index:3}
-.so-links a{position:relative;display:flex;align-items:center;width:760px;max-width:70vw;height:68px;font-size:30px;font-weight:700;color:#000;line-height:1;text-decoration:none;transform:translateX(0);transition:transform .4s ease-in-out}
+.so-links a{position:relative;display:flex;align-items:center;width:760px;max-width:70vw;height:68px;font-size:30px;font-weight:700;color:#000;line-height:1;text-decoration:none;transform:translateX(0);transition:transform .4s cubic-bezier(0,0,.58,1)}
 .so-links a:hover,.so-links a.on{color:#000;transform:translateX(10px)}
-.so-links a::before{content:"+";position:absolute;left:-52px;top:50%;margin-top:-22px;color:#db1200;font-weight:700;font-size:40px;line-height:1;opacity:0;transform:scale(1);transform-origin:left center;transition:opacity .4s ease-in-out,transform .4s ease-in-out}
-.so-links a:hover::before,.so-links a.on::before{opacity:1;transform:scale(0.55)}
+.so-links a::before{content:"";position:absolute;left:-58px;top:50%;width:34px;height:34px;margin-top:-17px;background:url('images/plusred.svg') center/contain no-repeat;opacity:0;transform:scale(1);transform-origin:center;transition:opacity .4s cubic-bezier(0,0,.58,1),transform .4s cubic-bezier(0,0,.58,1)}
+.so-links a:hover::before,.so-links a.on::before{opacity:1;transform:scale(0.5)}
 
 /* footer */
 .svc-footer{background:#fff;padding:0 0 40px;margin-top:20px}
@@ -69,5 +69,5 @@ img{display:block;max-width:100%}
   .so-label{position:static;color:#000;margin-bottom:24px}
   .so-links{position:static}
   .so-links a{font-size:26px;padding-left:40px}
-  .so-links a::before{left:0;opacity:1;transform:none;font-size:26px}
+  .so-links a::before{left:0;width:22px;height:22px;margin-top:-11px;opacity:1;transform:scale(1)}
 }
