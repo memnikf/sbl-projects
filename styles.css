@@ -23,8 +23,8 @@ img{display:block}
 .logo{height:50px}
 .contact-us{color:#db1200;font-weight:700;font-size:16px;line-height:1.55;transition:color .3s ease}
 .contact-us:hover{color:#eb1800}
-.contact-plus{position:absolute;left:-22px;top:-22px;width:31px;height:31px;opacity:0;transform:translateY(-6px);transition:opacity .4s cubic-bezier(0,0,.58,1),transform .4s cubic-bezier(0,0,.58,1);pointer-events:none}
-.contact-us:hover .contact-plus{opacity:1;transform:translateY(0)}
+.contact-plus{position:absolute;left:-20px;top:-22px;width:31px;height:31px;opacity:0;transform:scale(1);transform-origin:center;transition:opacity .4s ease-in-out,transform .4s ease-in-out;pointer-events:none}
+.contact-us:hover .contact-plus{opacity:1;transform:scale(0.55)}
 
 /* hero heading */
 .hero-h1{font-size:100px;line-height:105px;font-weight:700;color:#000;letter-spacing:0}
