@@ -49,10 +49,10 @@ img{display:block}
 /* ===== HOVER ANIMATIONS (400ms, matching original) ===== */
 /* red tiles: the "+" fades/scales down (1 -> 0.5) on hover, easeOut (Tilda) */
 .tile-hover .plus{transform:scale(1);transform-origin:center;transition:transform .4s cubic-bezier(0,0,.58,1)}
-.tile-hover:hover .plus{transform:scale(0.5)}
+.tile-hover:hover .plus,.tile-hover:active .plus{transform:scale(0.5)}
 /* red fill subtly deepens */
 .tile-hover .fill-red{transition:background-color .4s ease}
-.tile-hover:hover .fill-red{background:#c21000}
+.tile-hover:hover .fill-red,.tile-hover:active .fill-red{background:#c21000}
 
 /* image tiles: static, no hover animation */
 
@@ -66,3 +66,56 @@ img{display:block}
 .foot-list a{position:relative;display:block;font-size:14px;line-height:1;margin-bottom:22px;text-decoration:underline;text-underline-offset:3px;transition:color .3s ease}
 .foot-list a:last-child{margin-bottom:0}
 .foot-list a:hover{color:#db1200}
+
+/* ===== MOBILE (<=768px): reflow into the original Tilda mobile layout ===== */
+@media (max-width:768px){
+  .viewport{overflow:visible;height:auto!important}
+  .stage{width:100%;margin:0;transform:none!important}
+  .board{width:100%;height:auto}
+
+  .board-main{display:grid;grid-template-columns:1fr 1fr;gap:0;padding:25px 20px 60px;align-items:start}
+  .board-main>.a{position:static}
+
+  /* the original mobile hides the black boxes and floating labels */
+  .board-main>:nth-child(4),  /* top black box */
+  .board-main>:nth-child(5),  /* Engineering Services */
+  .board-main>:nth-child(6),  /* since 2016 */
+  .board-main>:nth-child(13), /* black who-we-are */
+  .board-main>:nth-child(18){display:none} /* tagline */
+
+  /* header */
+  .board-main .logo{order:1;grid-column:1;height:38px!important;width:auto;align-self:center}
+  .board-main .contact-us{order:2;grid-column:2;justify-self:end;align-self:center;position:relative;left:0!important;top:0!important;font-size:15px}
+  .contact-us .contact-plus{opacity:1;transform:none;width:19px;height:19px;left:2px;top:-22px}
+
+  /* hero */
+  .hero-h1{order:3;grid-column:1/-1;width:auto!important;font-size:clamp(30px,10.4vw,56px);line-height:1.06;margin:80px 0 12px}
+
+  /* checkerboard mosaic — red/photo alternating, no gaps (original order) */
+  .board-main .tile{position:relative;left:0!important;top:0!important;width:auto!important;height:auto;aspect-ratio:1/1}
+  .board-main>:nth-child(7){order:4}   /* red: Elektroplanung */
+  .board-main>:nth-child(8){order:5}   /* img: elektro */
+  .board-main>:nth-child(10){order:6}  /* img: software (left) */
+  .board-main>:nth-child(9){order:7}   /* red: Softwareentwicklung */
+  .board-main>:nth-child(11){order:8}  /* red: Hydraulikplanung */
+  .board-main>:nth-child(12){order:9}  /* img: hydraulik */
+  .board-main>:nth-child(14){order:10} /* img: fertigung */
+  .board-main>:nth-child(15){order:11} /* red: Fertigung & Montage */
+  .board-main>:nth-child(17){order:12} /* red: Von der Planung (left) */
+  .board-main>:nth-child(16){order:13} /* img */
+
+  .celltitle{left:20px!important;top:20px!important;right:14px;width:auto!important;font-size:13px}
+  .plus{left:auto!important;top:auto!important;right:13px;bottom:15px;width:22px;height:22px}
+
+  /* footer — single column like the original */
+  .board-footer{display:flex;flex-direction:column;height:auto;padding:60px 20px 32px}
+  .board-footer>.a{position:static;width:auto!important}
+  .board-footer .divider{order:1;width:100%!important;margin:0}
+  .board-footer img{order:2;height:42px!important;margin:50px 0 55px;align-self:flex-start}
+  .foot-phone{order:3}
+  .foot-addr{order:4;margin:4px 0 26px}
+  .foot-list{order:5;margin-bottom:34px}
+  .foot-list a{margin-bottom:22px}
+  .foot-link{order:6;margin-bottom:14px}
+  .foot-copy{order:9;margin-top:16px}
+}

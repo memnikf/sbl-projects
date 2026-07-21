@@ -17,7 +17,8 @@
     + '.kpf input:focus+label,.kpf input:not(:placeholder-shown)+label,.kpf textarea:focus+label,.kpf textarea:not(:placeholder-shown)+label{top:-14px;font-size:12px;color:#db1200}'
     + '.kpop-send{width:100%;background:#db1200;color:#fff;border:0;padding:18px;font-family:"Fira Sans",Arial,sans-serif;font-weight:700;font-size:16px;cursor:pointer;transition:background .3s}'
     + '.kpop-send:hover{background:#eb1800}'
-    + '.kpop-ok{margin-top:16px;text-align:center;color:#2ea44f;font-weight:600}';
+    + '.kpop-ok{margin-top:16px;text-align:center;color:#2ea44f;font-weight:600}'
+    + '@media(max-width:600px){.kpop-box{padding:44px 22px 30px}.kpop-title{font-size:26px;margin-bottom:26px}}';
 
   var html = ''
     + '<div class="kpop-ov" data-close></div>'
