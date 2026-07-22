@@ -35,7 +35,7 @@ img{display:block}
 /* ===== mosaic tiles ===== */
 .tile{width:300px;height:300px}
 .fill{position:absolute;inset:0}
-.fill-red{background:#db1200}
+.fill-red{background:#940000}
 .fill-black{background:#000}
 .fill-img{background-size:cover;background-position:center;background-repeat:no-repeat}
 
@@ -53,9 +53,9 @@ img{display:block}
 /* red tiles: the "+" fades/scales down (1 -> 0.5) on hover, easeOut (Tilda) */
 .tile-hover .plus{transform:scale(1);transform-origin:center;transition:transform .4s cubic-bezier(0,0,.58,1)}
 .tile-hover:hover .plus,.tile-hover:active .plus{transform:scale(0.5)}
-/* red fill subtly deepens */
+/* red fill brightens on hover (original reveals a lighter #db1200 layer) */
 .tile-hover .fill-red{transition:background-color .4s ease}
-.tile-hover:hover .fill-red,.tile-hover:active .fill-red{background:#c21000}
+.tile-hover:hover .fill-red,.tile-hover:active .fill-red{background:#db1200}
 
 /* image tiles: static, no hover animation */
 
@@ -80,7 +80,7 @@ img{display:block}
   .board-main .tile-hover:hover .plus,
   .board-main .tile-hover:active .plus{transform:none!important}
   .board-main .tile-hover:hover .fill-red,
-  .board-main .tile-hover:active .fill-red{background:#db1200!important}
+  .board-main .tile-hover:active .fill-red{background:#940000!important}
 
   .viewport{overflow:visible;height:auto!important}
   .stage{width:100%;margin:0;transform:none!important}
