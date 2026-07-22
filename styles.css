@@ -1,3 +1,6 @@
+@font-face{font-family:'FiraSans';src:url('fonts/firasans-regular.woff') format('woff');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'FiraSans';src:url('fonts/firasans-extrabold.woff') format('woff');font-weight:700;font-style:normal;font-display:swap}
+
 *{margin:0;padding:0;box-sizing:border-box}
 html,body{background:#f0f0f0;font-family:'FiraSans',Arial,sans-serif;color:#000}
 body{overflow-x:hidden}
@@ -69,6 +72,16 @@ img{display:block}
 
 /* ===== MOBILE (<=768px): reflow into the original Tilda mobile layout ===== */
 @media (max-width:768px){
+  /* original mobile is fully static — no fade-in, no hover/tap animations */
+  .stage{opacity:1!important;transition:none!important}
+  .contact-us,.contact-us .contact-plus,
+  .board-main .tile-hover .plus,
+  .board-main .tile-hover .fill-red{transition:none!important}
+  .board-main .tile-hover:hover .plus,
+  .board-main .tile-hover:active .plus{transform:none!important}
+  .board-main .tile-hover:hover .fill-red,
+  .board-main .tile-hover:active .fill-red{background:#db1200!important}
+
   .viewport{overflow:visible;height:auto!important}
   .stage{width:100%;margin:0;transform:none!important}
   .board{width:100%;height:auto}
